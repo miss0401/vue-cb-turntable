@@ -8,7 +8,7 @@ Build Setup
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8081
 npm run dev
 
 # build for production with minification
@@ -115,7 +115,7 @@ export default {
 </script>
 ```
 
-##参数解释
+## 参数解释
 
 |参数名   |    默认值    |     用途     |
 |------     | -----------   | ---------   |
