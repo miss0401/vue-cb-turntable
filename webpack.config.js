@@ -8,7 +8,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-cb-turntable.js'
+    filename: 'vue-cb-turntable.js',
+    library: 'vueTurntable',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [

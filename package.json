@@ -1,7 +1,7 @@
 {
   "name": "vue-cb-turntable",
-  "description": "A Vue.js project",
-  "version": "1.0.0",
+  "description": "vue转盘神器",
+  "version": "1.0.6",
   "author": "hongshu.han",
   "license": "MIT",
   "private": false,
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "lib-flexible": "^0.3.2",
-    "vue": "^2.5.11"
+    "vue": "^2.6.1"
   },
   "browserslist": [
     "> 1%",
