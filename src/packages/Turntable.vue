@@ -4,7 +4,7 @@
       <template v-if="index === 4">
         <div class="start-btn" @click="clickLottery">免费抽奖</div>
       </template>
-      <div v-else>
+      <div class="prize-item" v-else>
         <slot name="layout" :item="item">
           <img :src="item.img" alt="">
           <p>{{ item.name }}</p>
@@ -74,7 +74,7 @@ export default {
       if (!isInter && this.selectedId < 0) {
         this.selectedId = this.options.startId
       }
-      if (lotteryId === 4 || !lotteryId) {
+      if (lotteryId === 4 || typeof(lotteryId) !== 'number') {
         throw new Error('您配置的中奖id不正确');
       }
       if (!isInter && this.mutex) {
@@ -106,8 +106,8 @@ export default {
 
 <style scoped>
   .turntable-wrap {
-    width: 9.333333rem;
-    padding: .4rem 0;
+    width: 700px;
+    padding: 30px 0;
     margin: 0 auto;
     align-items: center;
     flex-wrap: wrap;
@@ -123,10 +123,10 @@ export default {
 
   .turntable-wrap .turntable-btn,
   .turntable-wrap .turntable-item {
-    width: 2.666667rem;
-    height: 2.666667rem;
-    margin: .066667rem;
-    border-radius: .266667rem;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 20px;
     background: #eec587;
     flex-direction: column;
   }
@@ -134,16 +134,16 @@ export default {
   .turntable-wrap .turntable-btn img,
   .turntable-wrap .turntable-item img {
     display: block;
-    width: 1.333333rem;
-    margin: .133333rem auto;
+    width: 100px;
+    margin: 10px auto;
   }
 
   .turntable-wrap .turntable-btn p,
   .turntable-wrap .turntable-item p {
     text-align: center;
-    font-size: .32rem;
+    font-size: 24px;
     color: #fff;
-    line-height: 2;
+    line-height: 1.4;
   }
 
   .turntable-wrap .turntable-btn .lottery-btn,
@@ -153,18 +153,22 @@ export default {
     outline: none;
     border: none;
     background: rgba(0, 0, 0, 0);
-    font-size: .533333rem;
+    font-size: 40px;
     color: #fff;
   }
 
+  .prize-item {
+    height: 100%;
+  }
+
   .start-btn {
-    font-size: .453333rem;
+    font-size: 34px;
     color: #fff;
     text-align: center;
   }
 
   .lottery-selected {
-    border: .08rem solid #fff391;
+    border: 6px solid #fff391;
     box-sizing: border-box;
   }
 </style>
